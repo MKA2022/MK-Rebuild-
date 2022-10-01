@@ -55,4 +55,4 @@ jobs:
               echo $(date -u +%T%P) >> loop.txt
               git add loop.txt
               git commit -m "Ubuntu-Linux : Loop $(date -u +%D-%T%P)"
-              git push -q https://${{ secrets.GIT_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:main
+              git push -q https://${{ secrets.GIT_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:heroku
