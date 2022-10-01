@@ -28,13 +28,13 @@ class Bot(Client):
         me = await self.get_me()
         self.username = '@' + me.username
         LOGGER.info(f"started with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-        if Config.OWNER_ID != 0:
+        """if Config.OWNER_ID != 0:
             try:
                 await self.send_message(
                     text= "🇹🇷 Bot Restarted",
                     chat_id=Config.OWNER_ID)
             except Exception as t:
-                LOGGER.error(str(t))
+                LOGGER.error(str(t))"""
 
     async def stop(self, *args):
         if Config.OWNER_ID != 0:
