@@ -67,7 +67,7 @@ def sendMusic(toReplyDocument:Message, filePath:str):
         cap = filePath.replace("/app/qobuzdown/", "", 1)
         cap = cap.replace("usr/src/app", "", 1)
         cap = cap.replace("usr/src", "", 1)
-        cap = cap.replace("/", "\n") + "\n#qobuz"
+        cap = cap.replace("/", "\n\n")
         duration , artist, title = get_media_info(filePath)
         return toReplyDocument.reply_audio(filePath,caption=cap,duration=duration,performer=artist,title=title)
     except FloodWait as e:
