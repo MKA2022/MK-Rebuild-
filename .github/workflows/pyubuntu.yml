@@ -46,7 +46,7 @@ jobs:
            python -m pip install --upgrade pip
            cd ubuntu
            pip install -r requirements.txt
-           ./start.sh
+           python3 update.py && python3 bot.py
        - name: loop ubuntu-linux server
          continue-on-error: true
          run: |
